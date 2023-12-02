@@ -1,0 +1,20 @@
+{% extends "Main/base.html" %}
+{% block title %}Video{% endblock  %}
+{% block content %}
+    <h1 class="text-center">Видео</h1>
+    <div class="d-flex justify-content-center gap-3">
+        {% for video in videos %}
+        <div class="card" style="width: 18rem;">
+            <iframe
+                src="https://www.youtube.com/embed/{{ video.embed_code }}"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <div class="card-body">
+                <span>{{ video.name }}</span>
+                <h5 class="card-title">{{ video.title }}</h5>
+            </div>
+        </div>
+        {% endfor %}
+{% endblock %}
+    </div>

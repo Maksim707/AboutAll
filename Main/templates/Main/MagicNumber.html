@@ -1,0 +1,10 @@
+{% extends "Main/base.html" %}
+{% block title %}Magic Number{% endblock %}
+{% block content %}
+<form method="post" class> {% csrf_token %}
+    <h1>Guess the number!</h1>
+    {{ result }}
+    <input type="number" name="number" class="form-control border-2">
+    <button type="submit">Попробовать</button>
+</form>
+{% endblock %}

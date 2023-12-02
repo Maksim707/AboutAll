@@ -1,0 +1,12 @@
+{% extends "Main/base.html" %}
+{% block title %}Video{% endblock %}
+{% block content %}
+<h1 class="text-center">Новое видео</h1>
+<form class="d-flex flex-column gap-2 justify-content-center mx-auto"
+    style="max-width: 400px" method="post">{% csrf_token %}
+    <input type="text" class="form-control" name="name" placeholder="Имя видео">
+    <input type="text" class="form-control" name="embed_code"
+        placeholder="Код видео">
+    <button class="btn btn-primary text-black shadow">Отправить</button>
+</form>
+{% endblock %}
